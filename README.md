@@ -62,3 +62,18 @@ The following table of unlock time & amount represents that your 30 days quota w
     ```
 
 
+## How to acquire my AUTH_TOKEN ?
+- step 1: open your DevTools (f12 shortcut) and then click 歷史訂單
+<img src="./asset/click-history-order.png" width="500px"></img>
+
+<br/>
+
+- step 2: find the on Networks -> Headers -> Request URL: https://www.rybit.com/wallet-api/v1/kgi/deposits
+<img src="./asset/find-deposits-api.png" width="500px"></img>
+
+<br/>
+
+- step 3: copy Authorization part that is your AUTH_TOKEN
+<img src="./asset/copy-authorization.png" width="500px"></img>
+
+
