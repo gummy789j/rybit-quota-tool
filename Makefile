@@ -1,14 +1,11 @@
-AUTH_TOKEN := [YOUR_AUTH_TOKEN]
-VIP_LEVEL := [YOUR_VIP_LEVEL]
-
 rqt-mac:
-	@./exe/rqt-darwin-arm64 quota --auth="$(AUTH_TOKEN)" --vip=$(VIP_LEVEL)
+	@./exe/rqt-darwin-arm64 quota
 
 rqt-linux:
-	@./exe/rqt-linux-amd64 quota --auth="$(AUTH_TOKEN)" --vip=$(VIP_LEVEL)
+	@./exe/rqt-linux-amd64 quota
 
 rqt-windows:
-	@./exe/rqt-windows-amd64.exe quota --auth="$(AUTH_TOKEN)" --vip=$(VIP_LEVEL)
+	@./exe/rqt-windows-amd64.exe quota
 
 # dev use only
 batch-build:

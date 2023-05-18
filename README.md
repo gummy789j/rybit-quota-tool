@@ -39,12 +39,12 @@ The following table of unlock time & amount represents that your 30 days quota w
     ```
     tips: please install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) before you started
 
-- step 2: setting up your AUTH_TOKEN and VIP_LEVEL in Makefile
+- step 2: setting up your AUTH_TOKEN and VIP_LEVEL in .env file, checking out the .env.example as reference
     
-    ```
-    AUTH_TOKEN := Bearer eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJiaXR1bml2ZXJzZS5vcmcvYXBpLXRyYWRpbmcvdHJhZGUiLCJleHAiOjE2ODQzNDQ2NjUsImp0aSI6IjIzNTE0OGFiLWUwYmItNDQzOC04ZGFlLKJNDBQ3ODIzNjAyYSIsImlhdCI6MTY4NDM0Mjg2NSwiaXNzIjoiYml0dW5pdmVyc2Uub3JnL3RyYWRlL3NpZ25lciIsInN1YiI6ImJpdHVuaXZlcnNlLm9yZy9hcGktdHJhZGluZy90cmFkZSIsInZlcnNpb24iOiIxLjAiLCJkYXRhIjp7InVzZXJfaWQiOiIyODc5NzgwOC1kMmMyLTRkOGUtOGUyYS00YWNmOGJjMmM1NjMiLCJrZXlfaWQiOiIwODhmZGI4YWIyZDNkNDVjZjcxMzI3NjM0MjMwNGE2OCIsImV4Y2hhbmdlIjoicGlvbmV4LnYyIiwiYXBpX2tleSI6ImM0YWM0ZGMwLWUyNTAtNGNlZi04ZTU1LTFmYTg5MWZkYTkwMSIsImV4Y2hhbmdlX2luZm8iOiJib3QifX0.iE9oECmT1pY0f50i0wUM0uVIHuQVrIXgHl-y3nN9gt2Gepk3-TsV-bB-5JOID4hQiOwXlAqkOz_lTLJlZDSX8g
+    ```env
+    AUTH_TOKEN=Bearer eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJiaXR1bml2ZXJzZS5vcmcvYXBpLXRyYWRpbmcvdHJhZGUiLCJleHAiOjE2ODQzNDQ2NjUsImp0aSI6IjIzNTE0OGFiLWUwYmItNDQzOC04ZGFlLKJNDBQ3ODIzNjAyYSIsImlhdCI6MTY4NDM0Mjg2NSwiaXNzIjoiYml0dW5pdmVyc2Uub3JnL3RyYWRlL3NpZ25lciIsInN1YiI6ImJpdHVuaXZlcnNlLm9yZy9hcGktdHJhZGluZy90cmFkZSIsInZlcnNpb24iOiIxLjAiLCJkYXRhIjp7InVzZXJfaWQiOiIyODc5NzgwOC1kMmMyLTRkOGUtOGUyYS00YWNmOGJjMmM1NjMiLCJrZXlfaWQiOiIwODhmZGI4YWIyZDNkNDVjZjcxMzI3NjM0MjMwNGE2OCIsImV4Y2hhbmdlIjoicGlvbmV4LnYyIiwiYXBpX2tleSI6ImM0YWM0ZGMwLWUyNTAtNGNlZi04ZTU1LTFmYTg5MWZkYTkwMSIsImV4Y2hhbmdlX2luZm8iOiJib3QifX0.iE9oECmT1pY0f50i0wUM0uVIHuQVrIXgHl-y3nN9gt2Gepk3-TsV-bB-5JOID4hQiOwXlAqkOz_lTLJlZDSX8g
 
-    VIP_LEVEL := 2
+    VIP_LEVEL=2
     ```
 
 - step 3: according your OS, executing command below 
@@ -69,13 +69,13 @@ The following table of unlock time & amount represents that your 30 days quota w
 
 <br/>
 
-- step 2: find the on Networks -> Headers -> Request URL: https://www.rybit.com/wallet-api/v1/kgi/deposits
+- step 2: find the target request on Networks -> Headers -> Request URL: https://www.rybit.com/wallet-api/v1/kgi/deposits
 
     <img src="./asset/find-deposits-api.png" width="500px"></img>
 
 <br/>
 
-- step 3: copy Authorization part that is your AUTH_TOKEN
+- step 3: copy Authorization part which is your AUTH_TOKEN
 
     <img src="./asset/copy-authorization.png" width="500px"></img>
 

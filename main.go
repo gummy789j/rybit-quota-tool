@@ -6,11 +6,14 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 	"sort"
+	"strconv"
 	"strings"
 	"time"
 
 	"github.com/bndr/gotabulate"
+	_ "github.com/joho/godotenv/autoload"
 	"github.com/shopspring/decimal"
 	"github.com/spf13/cobra"
 )
@@ -82,6 +85,16 @@ type depositRecord struct {
 	UsdtAmount    decimal.Decimal `json:"usdt_amount"`
 }
 
+func init() {
+	authorization = os.Getenv("AUTH_TOKEN")
+	vipLevelStr := os.Getenv("VIP_LEVEL")
+	vipUint, err := strconv.ParseUint(vipLevelStr, 10, 8)
+	if err != nil {
+		panic(err)
+	}
+	userVIPLevel = uint8(vipUint)
+}
+
 func main() {
 	var rootCmd = &cobra.Command{
 		Use:   "rqt",
@@ -92,8 +105,8 @@ func main() {
 
 	rootCmd.AddCommand(quotaCmd)
 
-	quotaCmd.Flags().StringVar(&authorization, "auth", "", "authorization token (Bearer ...)")
-	quotaCmd.Flags().Uint8Var(&userVIPLevel, "vip", 1, "VIP level (1, 2, 3, 4)")
+	quotaCmd.Flags().StringVar(&authorization, "auth", authorization, "authorization token (Bearer ...)")
+	quotaCmd.Flags().Uint8Var(&userVIPLevel, "vip", userVIPLevel, "VIP level (1, 2, 3, 4)")
 
 	rootCmd.Execute()
 }
