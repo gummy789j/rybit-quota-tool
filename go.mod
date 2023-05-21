@@ -1,6 +1,6 @@
 module github.com/gummy789j/rybit-quota-tool
 
-go 1.18
+go 1.19
 
 require (
 	github.com/bndr/gotabulate v1.1.2
